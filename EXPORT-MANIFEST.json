@@ -1,0 +1,120 @@
+{
+  "format": "drey-publication-export/1",
+  "repo": "drey-skills",
+  "visibility": "public",
+  "purpose": "Drey 스킬 (정본은 본체 browser/src/Browser.App/Assets/claude/drey-plugin — 이 저장소는 그 내보내기, 손으로 따로 고치지 않음)",
+  "source": {
+    "kind": "main",
+    "commit": "ea88256567272d7f882fad0e9051c3f9917c14f5"
+  },
+  "files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "bytes": 277,
+      "sha256": "96980295D0CDE6B73190D01631703C22AE5506293DEB7E801CF6460A0F9ED2D9"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1062,
+      "sha256": "006AF1AFA4A12314477088075B83A20AFB947B239ECC5A04C15267E6595394E7"
+    },
+    {
+      "path": "LICENSES/superpowers-MIT.txt",
+      "bytes": 1070,
+      "sha256": "A37E0E9697144819E1D965176AC4AE5BC3FA02D11E7812036BBCADF6DAFE2400"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1404,
+      "sha256": "6E65D71B53F15A2D593386C230AFEEBD9E4AE8BFC3FE0C0CBA3A15ECD3F6E819"
+    },
+    {
+      "path": "README.ko.md",
+      "bytes": 3636,
+      "sha256": "CEAE300B164D646F8794D397116EB463AAEB1AB4BE3C219430B30C0E09907824"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3436,
+      "sha256": "CD3EB578CC48B422FE13A3FE65F8E38496EB034429094F1BC8AB84C2469EDB00"
+    },
+    {
+      "path": "drey-app/README.md",
+      "bytes": 1071,
+      "sha256": "BD142EF4449F0A609A35A1EE49B207778F09A2B06255E35F48F09242E279A112"
+    },
+    {
+      "path": "drey-app/hooks.json",
+      "bytes": 1729,
+      "sha256": "C2B266988ED2AF2F211887AA5CB79FC0FB84F1F02D7CCF7F923E7CF084BBDC72"
+    },
+    {
+      "path": "skills/debugging/SKILL.md",
+      "bytes": 4113,
+      "sha256": "C556580C45A53931A476402D5FC75E04E4093957EFCDE4D0B7451E90A0607DD6"
+    },
+    {
+      "path": "skills/handoff/SKILL.md",
+      "bytes": 1724,
+      "sha256": "806A04AA410FB23CA64362DF02A81A3B1EC6FE6A89EC217380A4626F97F4AE8E"
+    },
+    {
+      "path": "skills/plan-consensus/SKILL.md",
+      "bytes": 4993,
+      "sha256": "01601AD860A24DCB24B47E215472DA86B225AA0B4CD80305C0B39A04228521CC"
+    },
+    {
+      "path": "skills/port-check/SKILL.md",
+      "bytes": 2824,
+      "sha256": "2D173A357682817617C3816749AC9517604F81FFC89A25B67EBAC3EDAFEA2700"
+    },
+    {
+      "path": "skills/update-docs/SKILL.md",
+      "bytes": 8672,
+      "sha256": "F275A9375F91E566AB5BF17093B15D84778DE253A4594F17F1A8210839432257"
+    },
+    {
+      "path": "skills/update-docs/references/manual-format.md",
+      "bytes": 3324,
+      "sha256": "5C831DA60520DB35578C45F72D6515AA154663D482BEC4AAFCE7D7E041C5DA7C"
+    },
+    {
+      "path": "skills/workspace-setup/SKILL.md",
+      "bytes": 7793,
+      "sha256": "C938ACA712A5D2A0BC1F68C0287D0DEEC92F6A18ACAE0596A5A74B35C5DD33D5"
+    },
+    {
+      "path": "skills/workspace-setup/references/manual-setup.md",
+      "bytes": 1822,
+      "sha256": "2CA470827A40EE831D14B75906A68182AE113F7FBDA9AE6EE59B44DD46001E50"
+    },
+    {
+      "path": "skills/workspace-setup/references/rules-start.md",
+      "bytes": 4609,
+      "sha256": "612A2ED4E545D991844E3D3CCCCB8001A3A5DC4D98D5B26049AA7299B9C9752D"
+    }
+  ],
+  "release_assets_not_in_git": [],
+  "scan": {
+    "block": 0,
+    "review": 1,
+    "task_id_severity": "review",
+    "task_id_note": "update-docs 스킬은 작업 문서 형식 설명에 업무 번호 예시(DR-030 등)를 쓴다 — 예시라 검토 항목으로만 (정본 본문은 고치지 않음)",
+    "findings": [
+      {
+        "rule": "internal_task_id",
+        "severity": "review",
+        "path": "skills/update-docs/references/manual-format.md",
+        "line": 44
+      }
+    ]
+  },
+  "publication": {
+    "status": "ready_for_review",
+    "blockers": [],
+    "verified": [
+      "상류 obra/superpowers LICENSE: 2026-11-03 주 세션이 공식 원문(raw.githubusercontent.com/obra/superpowers/main/LICENSE)과 대조 — 공백·줄바꿈을 뺀 본문 전체 일치, Copyright (c) 2025 Jesse Vincent 보존 (바이트 일치 주장 아님)",
+      "자체 작성 부분 라이선스: 2026-11-07 사용자 승인 — MIT, Copyright (c) 2026 TRpop (drey-plugin/LICENSE). 상류 superpowers MIT 원문·NOTICE 유지"
+    ]
+  }
+}

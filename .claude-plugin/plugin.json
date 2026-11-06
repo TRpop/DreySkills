@@ -1,0 +1,8 @@
+{
+  "name": "drey",
+  "version": "2.0.0",
+  "description": "Drey Browser Claude Code 탭이 이 세션에만 더하는 스킬: 작업 규칙 만들기, 기획 합의, 디버깅, 포팅 비교, 작업 문서 갱신, 인수인계",
+  "author": {
+    "name": "Drey Browser"
+  }
+}

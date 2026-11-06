@@ -1,0 +1,66 @@
+{
+  "description": "Drey Browser: 세션 시작·컴팩팅 뒤 docs/drey 단계 문서·plan 요약을 넣고, 턴 경계에는 단계 문서·plan·운영 계약이 바뀐 때만 짧은 안내를 넣고, 작업 문서를 고친 뒤 검증 오류를 알린다 (앱 폴더의 DreyBrowser.Mcp.exe --claude-hook, 읽기 전용)",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/../../../DreyBrowser.Mcp.exe",
+            "args": [
+              "--claude-hook",
+              "compact"
+            ],
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/../../../DreyBrowser.Mcp.exe",
+            "args": [
+              "--claude-hook",
+              "start"
+            ],
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/../../../DreyBrowser.Mcp.exe",
+            "args": [
+              "--claude-hook",
+              "doc-check"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/../../../DreyBrowser.Mcp.exe",
+            "args": [
+              "--claude-hook",
+              "turn"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
